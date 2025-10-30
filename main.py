@@ -1,5 +1,6 @@
 from multi_form_bubble_app import MultiFormBubbleApp
 
+
 def main():
     """主函数"""
     # 预定义的文本列表
@@ -25,14 +26,14 @@ def main():
         "每一天都比昨天更爱你",
         "你是我藏在心里的甜"
     ]
-    
+
     # 预定义的颜色列表
     default_colors = [
         "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4",
         "#FECA57", "#FF9FF3", "#54A0FF", "#5F27CD",
         "#00D2D3", "#FF9F43"
     ]
-    
+
     # 创建并运行应用
     app = MultiFormBubbleApp(
         texts=default_texts,
@@ -40,9 +41,10 @@ def main():
         bubble_count=1000,  # 创建bubble_count个气泡窗口
         fade_out_duration=3.0,  # 设置淡出动画持续时间为fade_out_duration秒
         life_duration=40,  # 设置每个窗口显示life_duration秒后淡出
-        gradual_interval=0.15  # 每个气泡间隔gradual_interval秒创建，实现逐渐变多的效果
+        gradual_interval=0.025  # 每个气泡间隔gradual_interval秒创建，实现逐渐变多的效果
     )
     app.run()
+
 
 if __name__ == "__main__":
     main()

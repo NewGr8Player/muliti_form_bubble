@@ -1,10 +1,12 @@
 import tkinter as tk
 from bubble_manager import BubbleManager
 
+
 class MultiFormBubbleApp:
     """多表单气泡应用主类"""
-    
-    def __init__(self, texts, colors=None, bubble_count=None, fade_out_duration=1.0, life_duration=40, gradual_interval=0.5):
+
+    def __init__(self, texts, colors=None, bubble_count=None, fade_out_duration=1.0, life_duration=40,
+                 gradual_interval=0.5):
         """
         初始化应用
         
@@ -18,18 +20,19 @@ class MultiFormBubbleApp:
         """
         # 创建Tk根窗口
         self.root = tk.Tk()
-        
+
         # 创建气泡管理器
         self.manager = BubbleManager(self.root, texts, colors, fade_out_duration, life_duration)
-        
+
         # 创建气泡窗口
         self.manager.create_bubbles(bubble_count, gradual_interval)
-        
+
         # 设置应用退出处理
         self.root.protocol("WM_DELETE_WINDOW", self._on_closing)
-    
+
     def run(self):
         """运行应用"""
+
         # 设置根窗口在所有气泡窗口关闭后自动退出，但只在第一个气泡创建后开始检测
         def check_windows():
             # 检查是否还有活跃的气泡窗口
@@ -39,11 +42,11 @@ class MultiFormBubbleApp:
                 self.root.destroy()
             else:
                 self.root.after(500, check_windows)
-        
+
         # 开始检查逻辑，但会在第一次检查时等待第一个气泡创建
         check_windows()
         self.root.mainloop()
-    
+
     def _on_closing(self):
         """窗口关闭处理函数"""
         self.root.destroy()
