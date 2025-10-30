@@ -61,7 +61,8 @@ muliti_form_bubble/
 ├── multi_form_bubble_app.py  # Contains MultiFormBubbleApp class
 ├── README.md                 # Project documentation (English)
 ├── README_cn.md              # Project documentation (Chinese)
-└── LICENSE                   # MIT License file
+├── LICENSE                   # MIT License file
+└── .gitignore                # Git ignore file
 ```
 
 ## License

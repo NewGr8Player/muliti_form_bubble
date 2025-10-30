@@ -61,7 +61,8 @@ muliti_form_bubble/
 ├── multi_form_bubble_app.py  # 包含MultiFormBubbleApp类
 ├── README.md                 # 项目说明文档（英文）
 ├── README_cn.md              # 项目说明文档（中文）
-└── LICENSE                   # MIT许可证文件
+├── LICENSE                   # MIT许可证文件
+└── .gitignore                # Git忽略文件
 ```
 
 ## 许可证
